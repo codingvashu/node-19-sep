@@ -15,6 +15,7 @@
                    <th>Father Name</th>
                    <th>Aadhar Card</th>
                    <th>Mobile No</th>
+                   <th>Actions</th>
                 </tr>
             </thead>
             <% students.forEach((student)=>{ %>
@@ -25,6 +26,8 @@
                     <td><%= student.fatherName %></td>
                     <td><%= student.adharCardNo %></td>
                     <td><%= student.mobileNo %></td>
+                    <td><a href="/student/edit/page/<%= student._id %>" class="btn btn-warning w-40">edit</a></td>
+                    <td><a href="/delete/student/<%= student._id %>" class="btn btn-danger w-40">delete</a></td>
                 </tr>
 
            <% }) %>
